@@ -1,0 +1,49 @@
+<p>Listado de peliculas</p>
+
+<div class="table-responsive-md">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">
+                Nombre
+            </th>
+            <th scope="col">
+                Genero
+            </th>
+            <th scope="col">
+                Detalle
+            </th>
+            <th scope="col">
+                Favoritos
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+   <tr *ngFor="let lista of listadoPeliculas" >
+       <td>
+           {{lista.Titulo}}
+       </td>
+       <td>
+           {{lista.Genero}}
+       </td>
+       <td>
+           <button class="btn btn-primary" (click)="onPeliculaSeleccionada(lista)"></button>
+       </td>
+       <td>
+        <button class="btn btn-warning" (click)="onPeliculaSeleccionada(lista,'true')"></button>
+    </td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <div class="d-flex justify-content-between p-2">
+    <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+    </ngb-pagination>
+  
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+      <option [ngValue]="2">2 items per page</option>
+      <option [ngValue]="4">4 items per page</option>
+      <option [ngValue]="6">6 items per page</option>
+    </select> -->
+  </div>
+  

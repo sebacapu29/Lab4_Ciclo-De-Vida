@@ -1,0 +1,21 @@
+<p>Peliculas!</p>
+
+<div class="container-fluid" >
+
+
+<div class="row">
+
+<div class="">
+    <app-listado-peliculas [listadoPeliculas]="lPeliculas"
+    (peliculaSeleccionada)="tomarPeliculaSeleccionada($event)"
+    (esFavorito)="tomarSiEsFavorito($event)"
+    (componenteFavorito)="ocultarFavorito($event)"></app-listado-peliculas>
+</div>
+<div class="detalle">    
+    <app-detalle-peliculas  *ngIf="!componenteFavoritos" [peliculaParaDetalle]="peliculaSelectParaDetalle" ></app-detalle-peliculas>
+</div>
+<div class="detalle">    
+    <app-favorito-pelicula  *ngIf="componenteFavoritos" [peliculaParaFavorito]="peliculaSelectParaDetalle" ></app-favorito-pelicula>
+</div>
+</div>
+</div>

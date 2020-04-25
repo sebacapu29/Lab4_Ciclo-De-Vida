@@ -1,0 +1,16 @@
+<h1 *ngIf="expression">Bienvenido administrador ngIf</h1>
+<h1 [hidden]="expression">Bienvenido Administrador hidden</h1>
+
+<p *ngFor="let item of lista">
+    <span>Nombre: </span>{{item.name}}
+    <br>
+    <span>Perfil: </span>{{item.perfil}}
+</p>
+<ul>
+    <li **ngFor="let pais of lPaises">
+        {{pais}}
+    </li>
+</ul>
+<button class="btn btn-primary" (click)="ocultarMostrar()">Ocultar/Mostrar</button>
+<button class="btn btn-success" (click)="irAPaginaPrincipal()">Pagina Usuarios</button>
+<button class="btn btn-warning" (click)="irAPaginaPeliculas()">Pagina Peliculas</button>

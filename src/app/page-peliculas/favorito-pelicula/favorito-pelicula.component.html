@@ -1,0 +1,7 @@
+
+<div *ngIf="peliculaParaFavorito" class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="peliculaParaFavorito.Poster" alt="imagen pelicula">
+    <div class="card-body">
+      <button class="btn btn-warning" (click)="agregarFavorito()">Agregar</button>
+    </div>
+  </div>

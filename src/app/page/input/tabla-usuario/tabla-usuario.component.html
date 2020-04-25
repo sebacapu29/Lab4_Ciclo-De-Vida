@@ -1,0 +1,21 @@
+<table class="table">
+	<thead>
+		<th>Legajo</th>
+		<th>Nombre</th>
+		<th>Apellido</th>
+		<th>Detalle</th>
+
+	</thead>
+  <tbody>
+  	
+<tr *ngFor="let usuario of listaUsuarios">
+    <td class="badge">{{usuario.legajo}}</td>
+    <td > {{usuario.nombre}} </td>
+    <td > {{usuario.apellido}} </td>
+    <td > <button type=
+        "button" class="btn btn-info btn-circle" (click)="mostrarDetalleUsuario(usuario)"><i class="fa fa-check"></i>
+    </button></td>
+</tr>
+
+  </tbody> 
+</table>
